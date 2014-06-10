@@ -21,12 +21,14 @@ Initially we will focus on the 12 residential colleges at Yale University:
 12. Pierson College
 
 And we will focus on a few basic statistics including:
+
 1. Cogen Electricity
 2. Water
 3. Solid Waste
 
 Data visualizations through graphs and charts is our initial approach but we hope to
 expand in the future to some of the following features:
+
 1. Interactive data manipulation
 2. Expanding to inter-college comparisons
 3. Advanced D3 integration
