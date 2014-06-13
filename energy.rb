@@ -4,5 +4,5 @@ configure do
   enable :sessions
 end
 get '/' do
-	erb :"index.html"
+	erb :"index"
 end	
