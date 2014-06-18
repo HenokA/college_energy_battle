@@ -14,7 +14,7 @@ sheet.each do |row|
 	break if row[0].nil? # if first cell empty
 	if row[3] == 'Cogen Electricity'
 		data[row[2].to_sym] ||= []
-		data[row[2].to_sym].unshift([row[4], row[5]])
+		data[row[2].to_sym].unshift([row[4], row[5], row[7], row[9], row[11]])
 		# puts row[2].to_s+ " "+ data[row[2].to_sym].to_s
 	end
 end
@@ -25,7 +25,7 @@ File.open('data.txt', 'w'){ |file|
 	colleges.each do |college|
 		file.write(college.to_s + "\n")
 		data[college.to_sym].each do |values|
-			file.write(values[0].to_s + ',' + values[1].to_s + "\n")
+			file.write(values[0].to_s + values[1].to_s+values[2].to_s + values[3].to_s + values[4].to_s+"\n")
 		end
 		file.write("newline\n")
 	end
