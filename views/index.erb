@@ -1,4 +1,116 @@
-<h1> Hello World! </h1>
+<!-- class=" nav-bar pure-menu pure-menu-open pure-menu-horizontal"
+ -->
+	<div id="horizontal-menu" class="nav-bar pure-menu pure-menu-open pure-menu-horizontal">
+
+		<a href="/" class="pure-menu-heading">Energize Yale</a>
+		<ul id="std-menu-items">
+			<li class="pure-menu-selected"><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/leaderboard">Leaderboard</a></li>
+			<li>
+				<a href="/data">Data</a>
+					<ul>
+						<li class="pure-menu-heading">For Colleges</li>
+						<li class="pure-menu-separator"></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BR">Branford</a></li>
+						<li><a href="/data/CC">Calhoun</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+						<li><a href="/data/BK">Berkeley</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+
+
+    <h2>Energy Reductions</h2>
+
+    <div class="pure-g">
+        <div class="graph-box pure-u-2-3">
+
+                        <div class="chart">
+              <div style="width: 40px;">4</div>
+              <div style="width: 80px;">8</div>
+              <div style="width: 150px;">15</div>
+              <div style="width: 160px;">16</div>
+              <div style="width: 230px;">23</div>
+              <div style="width: 420px;">42</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <button class="button-large pure-button pure-button-primary">See the Leaderboard</button>
+
+
+
+
+    <script>
+    var Y = YUI({
+        gallery: 'gallery-2013.02.07-15-27',
+        fetchCSS: false
+    }).use('gallery-sm-menu', 'event-tap', 'node-base', function (Y) {
+
+        var horizontalMenu = new Y.Menu({
+            container: '#horizontal-menu',
+            sourceNode: '#std-menu-items',
+            orientation: 'horizontal',
+            hideOnOutsideClick: false
+        });
+
+        horizontalMenu.render();
+        horizontalMenu.show();
+
+
+        Y.one('#showFixedMenuBtn').on('tap', function (e) {
+            var fixedMenu = Y.one('#fixed-menu');
+            fixedMenu.toggleClass('yui3-menu-open');
+        });
+
+    });
+    </script>
+
+
+
+
+
+<!-- <script>
+YUI({
+    classNamePrefix: 'pure'
+}).use('gallery-sm-menu', function (Y) {
+
+    var horizontalMenu = new Y.Menu({
+        container         : '#demo-horizontal-menu',
+        sourceNode        : '#std-menu-items',
+        orientation       : 'horizontal',
+        hideOnOutsideClick: false,
+        hideOnClick       : false
+    });
+
+    horizontalMenu.render();
+    horizontalMenu.show();
+
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+
 <div class="chart">
   <div style="width: 40px;">4</div>
   <div style="width: 80px;">8</div>
