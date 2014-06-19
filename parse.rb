@@ -25,7 +25,7 @@ File.open('data.txt', 'w'){ |file|
 	colleges.each do |college|
 		file.write(college.to_s + "\n")
 		data[college.to_sym].each do |values|
-			file.write(values[0].to_s + values[1].to_s+values[2].to_s + values[3].to_s + values[4].to_s+"\n")
+			file.write(values[0].to_s + ',' + values[1].to_s + ","+values[2].to_s + ","+ values[3].to_s + ","+ values[4].to_s+"\n")
 		end
 		file.write("newline\n")
 	end
