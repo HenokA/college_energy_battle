@@ -1,0 +1,23 @@
+* a67dfee 2014-06-20 | Am able to grab the last two months of Common Usage data for each college and print them out (HEAD, origin/master, master) [Henok Addis]
+* 9a7325d 2014-06-20 | Commit combining the adjustment file with the parsing file, unsure if I already committed this [Henok Addis]
+*   6b051a1 2014-06-19 | Merge branch 'master' of https://github.com/HenokA/college_energy_battle [Henok Addis]
+[32m|[m[33m\[m  
+[32m|[m *   69890f8 2014-06-19 | Merge branch 'master' of https://github.com/HenokA/college_energy_battle [Phil Esterman]
+[32m|[m [34m|[m[35m\[m  
+[32m|[m * [35m\[m   0c2ed48 2014-06-19 | basic layout design [Phil Esterman]
+[32m|[m [36m|[m[1;31m\[m [35m\[m  
+[32m|[m * [1;31m|[m [35m|[m 2f1e954 2014-06-13 | spacing [Phil Esterman]
+* [1;31m|[m [1;31m|[m [35m|[m 497bf39 2014-06-19 | Fixed the monthly adjustment to work and have it writing to a adjusted.txt file [Henok Addis]
+[35m|[m [1;31m|[m[35m_[m[1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m [1;31m|[m   
+* [1;31m|[m [1;31m|[m 84584c5 2014-06-18 | Added the rest of the data inputs from the excel file [Henok Addis]
+* [1;31m|[m [1;31m|[m 8f17b3b 2014-06-17 | Added the beginnings of our seasonal adjustment [Henok Addis]
+* [1;31m|[m [1;31m|[m 8018d2f 2014-06-17 | Fixed the parsing of the information from the spreadsheet and pushed it to a textfile. (parsing) [Henok Addis]
+[1;31m|[m [1;31m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;31m|[m   
+* [1;31m|[m 7100cb5 2014-06-13 | Created a bar graph with style on the page. Updated files as well. [Henok Addis]
+[1;31m|[m[1;31m/[m  
+* ad29aca 2014-06-13 | Changed to support a layout.erb. Fixes #1: [Henok Addis]
+* 2f70d09 2014-06-13 | Created a basic Hello World application with all of the files. Runs in Sinatra. [Henok Addis]
+* 68bdf7e 2014-06-10 | Edit to readme [Henok Addis]
+* 6e42dbc 2014-06-10 | Initial commit with README.md [Henok Addis]
