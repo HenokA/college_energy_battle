@@ -26,3 +26,17 @@
 			</li>
 		</ul>
 	</div>
+
+
+	<p>Click the button to display the total height of your screen, in pixels.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = "Total Height: " + window.screen.availHeight + "px";
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
