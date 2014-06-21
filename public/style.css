@@ -21,8 +21,12 @@ text-align: center
   border-radius: 3px;
   padding-top: 18px;
   padding-bottom: 18px;
-  margin-left: 17%;
-  margin-top: 10px;
+  /*margin-left: 17%;*/
+  /*left: 0;*/
+  margin: auto;
+  /*margin-top: 5%;*/
+  
+  width: 90%;
 }
 
 
@@ -40,6 +44,7 @@ h1{
   padding-bottom: 5px;
   margin: 1px;
   color: white;
+  z-index:999;
 }
 
 .bar.positive {
