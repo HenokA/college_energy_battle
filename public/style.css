@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 /*.nav-bar{
   margin-bottom: 30px;
 }
 */
+
 body{
 	/*background-color: #CAF3B1*/
   background-color: #EDEDED
@@ -23,13 +23,6 @@ h2.subtitle{
 	display: inline-block;
 	font-size: 19px;
 	font-weight: 100;
-}
-
-
-h2{
-text-align: center;
-
-
 }
 
 .container{
@@ -101,6 +94,7 @@ h1, h2, h3, h4{
 .button-large{
   margin-top: 50px;
   font-size:110%;
-  margin-left: 40%
+  margin-left: 40%;
+  margin-bottom: 15px;
 
 }
