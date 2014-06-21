@@ -39,13 +39,23 @@
 <script type="text/javascript">
 var chart = c3.generate({
     size: {
-      height:800
+      height:475
     },
     data: {
         columns: [
             <%= negdata %>, <%= posdata %>
         ],
         type: 'bar',
+
+    colors: {
+
+                'Best Colleges': '#11AE28',
+                'Worst Colleges': '#DD0000'
+
+              },
+
+
+
         labels: true
     },
   axis: {
