@@ -7,11 +7,39 @@ body{
   background-color: #EDEDED
 }
 
+h1.title{
+	margin: 16px 0;
+	text-align: left;
+	font-size: 25px;
+	display: inline-block;
+ 
+}
+
+h2.subtitle{
+	margin-left: 9px;
+	text-align: left;
+	display: inline-block;
+	font-size: 20px;
+}
+
+
 h2{
-text-align: center
+text-align: center;
 
 
 }
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+/*	text-align: center
+*/
+}
+
+h1, h2, h3, h4{
+	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
 
 
 
@@ -30,13 +58,14 @@ text-align: center
 }
 
 
-h1{
+/*h1{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	color: white;
 	text-align: center;
-}
-.chart div {
+}*/
 
+/*this is for the Green Google Chart we will delete*/
+.G-chart div {
   font: 10px sans-serif;
   background-color:#11AE28;
   text-align: right;
