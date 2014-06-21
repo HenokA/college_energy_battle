@@ -61,7 +61,14 @@ var chart = c3.generate({
                 'Best Colleges': '#11AE28',
                 'Worst Colleges': '#DD0000'
               },
-        labels: true
+        labels: {
+          format:{
+            y: d3.format('%')
+          }
+        },
+        zoom:{
+          enabled: true
+        }
     },
   axis: {
         rotated: true,
@@ -77,10 +84,10 @@ var chart = c3.generate({
         y:{
           label: {
           text: 'Percent improvement from the previous month (Kilowatt Hours)',
-          position: 'outer-middle'
+          position: 'outer-center'
           },
           tick:{
-            fit: true,
+              format: d3.format('%'),
           }
         },
     },
@@ -94,12 +101,12 @@ var chart = c3.generate({
         ratio: 1
       }
     },
-    // tooltip: {
-    //     format: {
-    //         title: function (d) { return 'Data ' + d; },
-    //         value: d3.format('%')
-    //     }
-    // }
+    tooltip: {
+        format: {
+            title: function (d) { return 'Data ' + d; },
+            value: d3.format("g")
+        }
+    }
 });
 </script>
     <button class="button-large pure-button pure-button-primary">See the Leaderboard</button>

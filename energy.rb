@@ -32,7 +32,7 @@ get '/' do
 		end
 	}
 	posdata.sort!{|x,y| y.to_f<=>x.to_f}
-	puts posdata
+	puts negdata
 	negdata.unshift("Worst Colleges")
 	posdata.unshift("Best Colleges")
 	erb :"index", :locals =>{:negdata => negdata, :posdata => posdata, :college => college}
