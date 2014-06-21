@@ -35,6 +35,10 @@ get '/about' do
 			college.push(line[0])
 		end
 	}
+	posdata.sort!{|x,y| y.to_f<=>x.to_f}
+	puts posdata
+	negdata.unshift("Worst Colleges")
+	posdata.unshift("Best Colleges")
 	erb :"about", :locals =>{:negdata => negdata, :posdata => posdata, :college => college}
 end
 
