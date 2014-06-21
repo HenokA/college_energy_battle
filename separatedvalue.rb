@@ -29,13 +29,13 @@ finaldata = Array.new
 data.each do |key, value|
 	pushing = (value[1].to_f - value[0].to_f).to_f / value[1].to_f
 	pushing = pushing*100
-	finaldata.push([key.to_s, pushing.to_s])
+	finaldata.push([key.to_s, pushing.to_f])
 end
 finaldata.sort_by!{|i| i[1]}
 puts finaldata
 #this writes the data into a tab separated file 
 File.open('data.tsv', 'w'){ |file|
-	file.write("college\tvalue\n")
+	file.write("College\tCogen Electricity\n")
 	finaldata.each do |key, value|
 		file.write(key.to_s + "\t" + value.to_s + "\n")
 	end
