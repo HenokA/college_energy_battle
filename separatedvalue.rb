@@ -28,7 +28,7 @@ finaldata = Array.new
 #this finds the percent change of the current month vs the previous month
 data.each do |key, value|
 	pushing = (value[1].to_f - value[0].to_f).to_f / value[1].to_f
-	pushing = pushing*100
+	# pushing = pushing*100
 	finaldata.push([key.to_s, pushing.to_f])
 end
 finaldata.sort_by!{|i| i[1]}
