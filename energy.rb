@@ -24,9 +24,9 @@ get '/' do
 			#change in energy because the chance of them using the EXACT 
 			#SAME AMOUNT is almost 0
 			if line[1].to_f <0 
-				negdata.push(line[1]) #pushes values less than 0
+				negdata.push(line[1].to_f.round(3)) #pushes values less than 0
 			elsif line[1].to_f >0
-				posdata.push(line[1]) #pushes values greater than 0
+				posdata.push(line[1].to_f.round(3)) #pushes values greater than 0
 			end
 			college.push(line[0])
 		end
@@ -56,9 +56,9 @@ get '/about' do
 			#change in energy because the chance of them using the EXACT 
 			#SAME AMOUNT is almost 0
 			if line[1].to_f <0 
-				negdata.push(line[1]) #pushes values less than 0
+				negdata.push(line[1].to_f.round(3)) #pushes values less than 0
 			elsif line[1].to_f >0
-				posdata.push(line[1]) #pushes values greater than 0
+				posdata.push(line[1].to_f.round(3)) #pushes values greater than 0
 			end
 			college.push(line[0])
 		end
