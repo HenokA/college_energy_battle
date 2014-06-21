@@ -50,29 +50,22 @@
 <script type="text/javascript">
 var chart = c3.generate({
     size: {
-      height: .7 *  y
+      height: .75 *  y
     },
     data: {
         columns: [
             <%= negdata %>, <%= posdata %>
         ],
         type: 'bar',
-
     colors: {
-
                 'Best Colleges': '#11AE28',
                 'Worst Colleges': '#DD0000'
-
               },
-
-
-
         labels: true
     },
   axis: {
         rotated: true,
         x:{
-
           label: {
             text: 'Residential Colleges',
             position: 'outer-middle'
@@ -80,7 +73,16 @@ var chart = c3.generate({
           tick:{
             fit: true,
           }
-        }
+        }, 
+        y:{
+          label: {
+          text: 'Percent improvement from the previous month (Kilowatt Hours)',
+          position: 'outer-middle'
+          },
+          tick:{
+            fit: true,
+          }
+        },
     },
     grid: {
         y: {
@@ -89,10 +91,15 @@ var chart = c3.generate({
     },
     bar: {
       width: {
-        ratio: 1.2
+        ratio: 1
       }
-    }
+    },
+    // tooltip: {
+    //     format: {
+    //         title: function (d) { return 'Data ' + d; },
+    //         value: d3.format('%')
+    //     }
+    // }
 });
 </script>
-
     <button class="button-large pure-button pure-button-primary">See the Leaderboard</button>

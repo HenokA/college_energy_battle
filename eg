@@ -1,0 +1,42 @@
+*   ce4d82a 2014-06-21 | Merge branch 'master' of https://github.com/HenokA/college_energy_battle (HEAD, master) [Henok Addis]
+[31m|[m[32m\[m  
+[31m|[m *   4eba8dc 2014-06-21 | formatted headings; created container divs nested for chart (origin/master) [Phil Esterman]
+[31m|[m [33m|[m[34m\[m  
+[31m|[m * [34m\[m   19dc571 2014-06-21 | Formatted Headers; Created nested divs with container to display graph [Phil Esterman]
+[31m|[m [35m|[m[36m\[m [34m\[m  
+[31m|[m * [36m|[m [34m|[m 4c4f0df 2014-06-21 | Revert "Added a version of the graph that we like with a decent colored background. Managed to adjust height and add a line at x=0 but we still need to figure out how to vary the size of the graph based on the size of the screen." [Phil Esterman]
+* [36m|[m [36m|[m [34m|[m 6a5fdec 2014-06-21 | Made the numbers show up with only three decimal places [Henok Addis]
+[34m|[m [36m|[m[34m_[m[36m|[m[34m/[m  
+[34m|[m[34m/[m[36m|[m [36m|[m   
+* [36m|[m [36m|[m 510a45e 2014-06-21 | Moved graph to home page, put it in a div to make it look good on the white background. [Henok Addis]
+[36m|[m [36m|[m[36m/[m  
+[36m|[m[36m/[m[36m|[m   
+* [36m|[m 9ef539e 2014-06-21 | Changed it to be the over version where the best and worst are matching, then second best and second worst, etc. [Henok Addis]
+* [36m|[m e5de8ef 2014-06-21 | Inserted our electricity data into the graph on the about page. Still need to figure out how to order the negatives first then the positives. [Henok Addis]
+[36m|[m[36m/[m  
+* 081955f 2014-06-21 | Added a version of the graph that we like with a decent colored background. Managed to adjust height and add a line at x=0 but we still need to figure out how to vary the size of the graph based on the size of the screen. [Henok Addis]
+* 2d4bfe1 2014-06-20 | started to add first C3.js; linked to the files; added button, title&fakechart [Phil Esterman]
+* 288f1b1 2014-06-20 | Finished making the tsv file to hold a sorted chart of monthly percent change of energy usage. [Henok Addis]
+* a67dfee 2014-06-20 | Am able to grab the last two months of Common Usage data for each college and print them out [Henok Addis]
+* 9a7325d 2014-06-20 | Commit combining the adjustment file with the parsing file, unsure if I already committed this [Henok Addis]
+*   6b051a1 2014-06-19 | Merge branch 'master' of https://github.com/HenokA/college_energy_battle [Henok Addis]
+[1;31m|[m[1;32m\[m  
+[1;31m|[m *   69890f8 2014-06-19 | Merge branch 'master' of https://github.com/HenokA/college_energy_battle [Phil Esterman]
+[1;31m|[m [1;33m|[m[1;34m\[m  
+[1;31m|[m * [1;34m\[m   0c2ed48 2014-06-19 | basic layout design [Phil Esterman]
+[1;31m|[m [1;35m|[m[1;36m\[m [1;34m\[m  
+[1;31m|[m * [1;36m|[m [1;34m|[m 2f1e954 2014-06-13 | spacing [Phil Esterman]
+* [1;36m|[m [1;36m|[m [1;34m|[m 497bf39 2014-06-19 | Fixed the monthly adjustment to work and have it writing to a adjusted.txt file [Henok Addis]
+[1;34m|[m [1;36m|[m[1;34m_[m[1;36m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[1;36m|[m [1;36m|[m   
+* [1;36m|[m [1;36m|[m 84584c5 2014-06-18 | Added the rest of the data inputs from the excel file [Henok Addis]
+* [1;36m|[m [1;36m|[m 8f17b3b 2014-06-17 | Added the beginnings of our seasonal adjustment [Henok Addis]
+* [1;36m|[m [1;36m|[m 8018d2f 2014-06-17 | Fixed the parsing of the information from the spreadsheet and pushed it to a textfile. (parsing) [Henok Addis]
+[1;36m|[m [1;36m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[1;36m|[m   
+* [1;36m|[m 7100cb5 2014-06-13 | Created a bar graph with style on the page. Updated files as well. [Henok Addis]
+[1;36m|[m[1;36m/[m  
+* ad29aca 2014-06-13 | Changed to support a layout.erb. Fixes #1: [Henok Addis]
+* 2f70d09 2014-06-13 | Created a basic Hello World application with all of the files. Runs in Sinatra. [Henok Addis]
+* 68bdf7e 2014-06-10 | Edit to readme [Henok Addis]
+* 6e42dbc 2014-06-10 | Initial commit with README.md [Henok Addis]
