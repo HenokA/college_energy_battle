@@ -41,39 +41,48 @@
 
 
 <!-- actual chart -->
-			<div id="chart"></div> 
+			<div id="chart"></div>
 
 			<script type="text/javascript">
-				
 			var chart = c3.generate({
+					size: {
+						height:800
+					},
+					padding: {
+						top: 100
+					},
 			    data: {
 			        columns: [
-
-			            <%= negdata %>, <%= posdata %>,
+			            <%= negdata %>, <%= posdata %>
 			        ],
 			        type: 'bar',
 			        labels: true
 			    },
+				axis: {
+			        rotated: true,
+			        x:{
 
-
-			axis: {
-			        rotated: true
+			        	label: {
+			        		text: 'Residential Colleges',
+			        		position: 'outer-middle'
+			        	},
+			        	tick:{
+			        		fit: true,
+			        	}
+			        }
 			    },
-
-
-
 			    grid: {
 			        y: {
 			            lines: [{value: 0}]
 			        }
 			    },
-
-
-
+			    bar: {
+			    	width: {
+			    		ratio: .8
+			    	}
+			    }
 			});
-
 			</script>
 
-		</div>
-
+	</div>
 	</div>

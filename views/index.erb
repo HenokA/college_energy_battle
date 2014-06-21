@@ -32,90 +32,46 @@
 
     <h2>Energy Reductions</h2>
 
-    <div class="pure-g">
-        <div class="graph-box pure-u-2-3">
+<div class = "graph-box" >
+<div id="chart"></div>
+</div>
 
-                        <div class="G-chart">
-              <div style="width: 40px;">4</div>
-              <div style="width: 80px;">8</div>
-              <div style="width: 150px;">15</div>
-              <div style="width: 160px;">16</div>
-              <div style="width: 230px;">23</div>
-              <div style="width: 420px;">42</div>
-            </div>
+<script type="text/javascript">
+var chart = c3.generate({
+    size: {
+      height:800
+    },
+    data: {
+        columns: [
+            <%= negdata %>, <%= posdata %>
+        ],
+        type: 'bar',
+        labels: true
+    },
+  axis: {
+        rotated: true,
+        x:{
 
-
-        </div>
-    </div>
-
+          label: {
+            text: 'Residential Colleges',
+            position: 'outer-middle'
+          },
+          tick:{
+            fit: true,
+          }
+        }
+    },
+    grid: {
+        y: {
+            lines: [{value: 0}]
+        }
+    },
+    bar: {
+      width: {
+        ratio: 1.2
+      }
+    }
+});
+</script>
 
     <button class="button-large pure-button pure-button-primary">See the Leaderboard</button>
-
-
-<!-- 
-
-    <script>
-    var Y = YUI({
-        gallery: 'gallery-2013.02.07-15-27',
-        fetchCSS: false
-    }).use('gallery-sm-menu', 'event-tap', 'node-base', function (Y) {
-
-        var horizontalMenu = new Y.Menu({
-            container: '#horizontal-menu',
-            sourceNode: '#std-menu-items',
-            orientation: 'horizontal',
-            hideOnOutsideClick: false
-        });
-
-        horizontalMenu.render();
-        horizontalMenu.show();
-
-
-        Y.one('#showFixedMenuBtn').on('tap', function (e) {
-            var fixedMenu = Y.one('#fixed-menu');
-            fixedMenu.toggleClass('yui3-menu-open');
-        });
-
-    });
-    </script>
-
- -->
-
-
-
-<!-- <script>
-YUI({
-    classNamePrefix: 'pure'
-}).use('gallery-sm-menu', function (Y) {
-
-    var horizontalMenu = new Y.Menu({
-        container         : '#demo-horizontal-menu',
-        sourceNode        : '#std-menu-items',
-        orientation       : 'horizontal',
-        hideOnOutsideClick: false,
-        hideOnClick       : false
-    });
-
-    horizontalMenu.render();
-    horizontalMenu.show();
-
-});
-</script> -->
-
-
-
-
-
-
-
-
-
-
-<div class="G-chart">
-  <div style="width: 40px;">4</div>
-  <div style="width: 80px;">8</div>
-  <div style="width: 150px;">15</div>
-  <div style="width: 160px;">16</div>
-  <div style="width: 230px;">23</div>
-  <div style="width: 420px;">42</div>
-</div>
