@@ -30,36 +30,42 @@
 <div id="chart"></div>
 
 <script type="text/javascript">
-	
 var chart = c3.generate({
+		size: {
+			height:800
+		},
+		padding: {
+			top: 100
+		},
     data: {
         columns: [
             ['data1', 30, -200, -100, 400, 150, 250],
-            ['data2', -50, 150, -150, 150, -50, -150],
-            ['data3', -100, 100, -40, 100, -150, -50]
-        ],
-        groups: [
-            ['data1', 'data2']
         ],
         type: 'bar',
         labels: true
     },
+	axis: {
+        rotated: true,
+        x:{
 
-
-axis: {
-        rotated: true
-    }
-
-
-
+        	label: {
+        		text: 'Residential Colleges',
+        		position: 'outer-middle'
+        	},
+        	tick:{
+        		fit: true,
+        	}
+        }
+    },
     grid: {
         y: {
             lines: [{value: 0}]
         }
+    },
+    bar: {
+    	width: {
+    		ratio: .8
+    	}
     }
-
-
-
 });
-
 </script>
