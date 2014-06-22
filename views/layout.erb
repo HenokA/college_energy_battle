@@ -47,11 +47,7 @@
 	</head>
 	<body>
 	
-	<script src="jquery-1.11.1.min.js"></script>
-	<script src="js/foundation.min.js"></script>
- 	 <script>
-   			 $(document).foundation();
-  	</script>
+
 
 
 
@@ -65,4 +61,21 @@
 			<%= yield %>		
 		</div>
 	</body>
+
+
+
+<script src="js/jquery.js"></script>
+	<script src="/js/vendor/fastclick.js"></script>
+	
+	
+	<script src="js/foundation.js"></script>
+	 <script src="js/foundation.topbar.js"></script>
+	 <script src="js/foundation.dropdown.js"></script>
+
+ 	 <script>
+   			 $(document).foundation();
+   			 $(document).foundation().foundation('top-bar');
+
+  	</script>
+	
 </html>
