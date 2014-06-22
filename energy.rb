@@ -39,6 +39,7 @@ get '/' do
 end	
 
 get '/about' do
+	data = Array.new
 	negdata = Array.new
 	posdata = Array.new
 	college = Array.new
@@ -60,6 +61,7 @@ get '/about' do
 			elsif line[1].to_f >0
 				posdata.push(line[1].to_f.round(3)) #pushes values greater than 0
 			end
+
 			college.push(line[0])
 		end
 	}

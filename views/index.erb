@@ -1,6 +1,27 @@
 <!-- class=" nav-bar pure-menu pure-menu-open pure-menu-horizontal"
  -->
-	<div id="horizontal-menu" class="nav-bar pure-menu pure-menu-open pure-menu-horizontal">
+<nav class="top-bar" data-topbar>
+  <ul class "title-area">
+    <li class="name">
+      <h1><a href="#">Energize Yale</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+        <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Right Button Active</a></li>
+      <li class="has-dropdown">
+        <a href="#">Right Button Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+
 
 		<a href="/" class="pure-menu-heading">Energize Yale</a>
 		<ul id="std-menu-items">
@@ -27,14 +48,22 @@
 					</ul>
 			</li>
 		</ul>
-	</div>
+</nav>
+
+  <div class="container">
+
+  <h1 class='title'>
+  Energy Reductions
+  </h1>
+  <h2 class='subtitle'>
+  Are Yale's Colleges Conserving Energy?
+  </h2>
 
 
-    <h2 style="margin-left: 2%">Energy Reductions</h2>
+  <div class='chart'>
 
-<div class = "graph-box" >
-<div id="chart"></div>
-</div>
+
+  <div id="chart"></div>
 
 
 <script type="text/javascript">
@@ -54,7 +83,8 @@ var chart = c3.generate({
     },
     data: {
         columns: [
-            <%= negdata %>, <%= posdata %>
+            <%= negdata %>, 
+            <%= posdata %>
         ],
         type: 'bar',
     colors: {
@@ -110,5 +140,11 @@ var chart = c3.generate({
     }
 });
 </script>
+
+  </div>
+  </div>
+
+
+
     <button class="button-large pure-button pure-button-primary">See the Leaderboard</button>
 
