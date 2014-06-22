@@ -43,54 +43,80 @@
 <!-- actual chart -->
 			<div id="chart"></div>
 
-			<script type="text/javascript">
-			var chart = c3.generate({
-					size: {
-						height:800
-					},
-					padding: {
-						top: 100
-					},
-			    data: {
-			        columns: [
-			            <%= negdata %>, <%= posdata %>
-			        ],
-			        type: 'bar',
+			
+<script type="text/javascript">
+  var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+</script>
 
-			        colors: {
 
-			        	'Best Colleges': '#11AE28',
-			        	'Worst Colleges': '#DD0000'
-
-			        },
-
-			        labels: true
-			    },
-				axis: {
-			        rotated: true,
-			        x:{
-
-			        	label: {
-			        		text: 'Residential Colleges',
-			        		position: 'outer-middle'
-			        	},
-			        	tick:{
-			        		fit: true,
-			        	}
-			        }
-			    },
-			    grid: {
-			        y: {
-			            lines: [{value: 0}]
-			        }
-			    },
-			    bar: {
-			    	width: {
-			    		ratio: .8
-			    	}
-			    }
-			});
-			</script>
+<script type="text/javascript">
+var chart = c3.generate({
+    size: {
+      height: .75 *  y
+    },
+    data: {
+        columns: [
+            <%= negdata %>, <%= posdata %>
+        ],
+        type: 'bar',
+    colors: {
+                'Best Colleges': '#11AE28',
+                'Worst Colleges': '#DD0000'
+              },
+        labels: {
+          format:{
+            y: d3.format('%'),
+             // d3.style("font-size", "34px")
+          }
+        },
+        zoom:{
+          enabled: true
+        }
+    },
+  axis: {
+        rotated: true,
+        x:{
+          label: {
+            text: 'Residential Colleges',
+            position: 'outer-middle'
+          },
+          tick:{
+            fit: true,
+          }
+        }, 
+        y:{
+          label: {
+          text: 'Percent improvement from the previous month (Kilowatt Hours)',
+          position: 'outer-center'
+          },
+          tick:{
+              format: d3.format('%'),
+          }
+        },
+    },
+    grid: {
+        y: {
+            lines: [{value: 0}]
+        }
+    },
+    bar: {
+      width: {
+        ratio: 1
+      }
+    },
+    tooltip: {
+        format: {
+            title: function (d) { return 'Data ' + d; },
+            value: d3.format("g")
+        }
+    }
+});
+</script>
 
 	</div>
 	</div>

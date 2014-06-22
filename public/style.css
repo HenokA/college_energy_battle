@@ -41,8 +41,6 @@ h1, h2, h3, h4{
 }
 
 
-
-
 .graph-box{
   background-color: white;
   border: 1px solid grey;
@@ -52,7 +50,7 @@ h1, h2, h3, h4{
   /*margin-left: 17%;*/
   /*left: 0;*/
   margin: auto;
-  /*margin-top: 5%;*/
+  margin-top: 2%;
   
   width: 90%;
 }
@@ -74,7 +72,23 @@ h1, h2, h3, h4{
   color: white;
   z-index:999;
 }
-
+.college{
+   width: 60%;
+  height: auto;
+}
+.collegeleft{
+  width: 60%;
+  height: auto;
+  float:left;
+}
+.collegeright{
+   width: 60%;
+  height: auto; 
+  float: right;
+}
+.Colleges > div{
+  display: block;
+}
 .bar.positive {
   fill: steelblue;
 }
@@ -99,4 +113,8 @@ h1, h2, h3, h4{
   font-size:110%;
   margin-left: 47%;
 
+}
+.college {
+  width: 15%;
+  height: 15%;
 }
