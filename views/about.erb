@@ -1,130 +1,63 @@
-<div class='sticky'>
-<nav class='top-bar' data-topbar>
-<ul class='title-area'>
-<li class='name'>
-<h1>
-<a href='/'>Energize Yale | Compete to Conserve</a>
-</h1>
-</li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-</ul>
-<section class='top-bar-section'>
-<ul class='right'>
-<li class='has-form'>
-<a class='button' href='#'>How Do You Stack Up?</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='/about'>About</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Data</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Button 3</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Button 4</a>
-</li>
-</ul>
-</section>
-</nav>
-</div>
+  <div class='sticky'>
+  <nav class='top-bar' data-topbar>
+  <ul class='title-area'>
+  <li class='name'>
+  <h1>
+  <a href='/'>Energize Yale | Compete to Conserve</a>
+  </h1>
+  </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class='top-bar-section'>
+  <ul class='right'>
+  <li class='has-form'>
+  <a class='button' href='#'>How Do You Stack Up?</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='/about'>About</a>
+  </li>
+  <li class='divider'></li>
+  <li class='has-dropdown'>
+    <a href='#'>College Data</a>
+    <ul class='dropdown'>
+      <li><a href='/data/bk'>Berkeley</a></li>
+      <li><a href='/data/br'>Branford</a></li>
+      <li><a href='/data/cc'>Calhoun</a></li>
+      <li><a href='/data/dc'>Davenport</a></li>
+      <li><a href='/data/es'>Ezra Stiles</a></li>
+      <li><a href='/data/je'>Jonathan Edwards</a></li>
+      <li><a href='/data/mc'>Morse</a></li>
+      <li><a href='/data/pc'>Pierson</a></li>
+      <li><a href='/data/sy'>Saybrook</a></li>
+      <li><a href='/data/sm'>Siliman</a></li>
+      <li><a href='/data/td'>Timothy Dwight</a></li>
+      <li><a href='/data/tc'>Trumbull</a></li>
+    </ul>
+  </li>
 
 
-<div class="container">
-
-	<h1 class='title'>
-	Energy Reductions
-	</h1>
-	<h2 class='subtitle'>
-	Are Yale's Colleges Conserving Energy?
-	</h2>
-
-
-	<div class='chart'>
-
-
-<!-- actual chart -->
-			<div id="chart"></div>
-
-			
-<script type="text/javascript">
-  var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth,
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-</script>
-
-
-<script type="text/javascript">
-var chart = c3.generate({
-    size: {
-      height: .75 *  y
-    },
-    data: {
-        columns: [
-            <%= negdata %>, <%= posdata %>
-        ],
-        type: 'bar',
-    colors: {
-                'Best Colleges': '#11AE28',
-                'Worst Colleges': '#DD0000'
-              },
-        labels: {
-          format:{
-            y: d3.format('%'),
-             // d3.style("font-size", "34px")
-          }
-        },
-        zoom:{
-          enabled: true
-        }
-    },
-  axis: {
-        rotated: true,
-        x:{
-          label: {
-            text: 'Residential Colleges',
-            position: 'outer-middle'
-          },
-          tick:{
-            fit: true,
-          }
-        }, 
-        y:{
-          label: {
-          text: 'Percent improvement from the previous month (Kilowatt Hours)',
-          position: 'outer-center'
-          },
-          tick:{
-              format: d3.format('%'),
-          }
-        },
-    },
-    grid: {
-        y: {
-            lines: [{value: 0}]
-        }
-    },
-    bar: {
-      width: {
-        ratio: 1
-      }
-    },
-    tooltip: {
-        format: {
-            title: function (d) { return 'Data ' + d; },
-            value: d3.format("g")
-        }
-    }
-});
-</script>
-
-	</div>
-	</div>
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 3</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 4</a>
+  </li>
+  </ul>
+  </section>
+  </nav>
+  </div>
+<h1 class= "What"> What Is This Data? </h1>
+  <div class="textdescription left">
+      <p> This data is pulled, organized and parsed from the Yale Facilities Energy Usage Explorer. It is the monthly adjusted readings of the Cogen Electricity usage in Kilowatts per Hour. The data is released to the public on a monthly basis.</p>
+  </div>
+  <h1 style="float:right" >What Does Monthly Adjusted Mean? </h1>
+  <div class="textdescription right">
+      <p style="text-align: right"> We took data from August, 2011 and we compared each month to all of the other months in our database. With this information, we adjusted each piece of data to remove any outlier information that could have been caused from a number of different scenarios (extreme weather, large event, etc.). </p>
+  </div>
+  <h1 style= "float:left"> But...What Am I Looking At? </h1>
+  <div class="textdescription left">
+      <p> What we did here is we took this monthly adjusted data and found the <strong>percent reduction </strong> in electricity usage from the previous month. This metric would allow us to measure the improvment of each residential college on a month by month basis.</p>
+  </div>
