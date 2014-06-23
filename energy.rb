@@ -75,3 +75,8 @@ end
 get '/leaderboard' do
 	erb :"leaderboard"
 end
+
+get '/data/:name' do
+college_name = params[:name]
+	erb college_name.to_sym
+end
