@@ -56,7 +56,7 @@
   'MORSE COLLEGE'=>"http://kierantimberlake.com/files/pages/10/morse_01.jpg", 'PIERSON COLLEGE'=> "http://pierson.yalecollege.yale.edu/sites/default/files/styles/threshold-1382/public/bl0105-large_0.jpg", 'SAYBROOK COLLEGE'=>"http://static.panoramio.com/photos/large/45521356.jpg",
   'SILLIMAN COLLEGE'=>"https://c2.staticflickr.com/8/7179/7120205533_32a9afba0d.jpg", 'TIMOTHY DWIGHT COLL.'=> "http://timothydwight.yalecollege.yale.edu/sites/default/files/styles/adaptive/public/timothydwight1.png", 'TRUMBULL COLLEGE'=> "http://upload.wikimedia.org/wikipedia/en/5/5b/MainCourtyard.jpg"} %>
 
-    <div class="container">
+<div class="container">
 
 
 <h1 class='title'>
@@ -68,35 +68,6 @@
 
 <div class = "chart">
 <div id="chart"></div>
-
-
-
-<!-- div class= "colleges">
-    <div  id="Berkeley">
-        <img class = "collegeleft"src="http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg">
-    </div>
-    <div  id="Branford">
-        <img class = "collegeright" src="http://31.media.tumblr.com/97d7ce38de20a27211fa78adfbd9e79c/tumblr_mrumvndF8n1r0cgg3o9_1280.jpg">
-    </div>
-    <div  id="Calhoun">
-        <img class = "collegeleft"src="http://upload.wikimedia.org/wikipedia/commons/f/f0/Calhoun_College_2011._JPM.jpg">
-    </div>
-     <div  id="Davenport">
-        <img class = "collegeright" src="http://4.bp.blogspot.com/_I6FWqZBqi-Q/TOxn5r6LToI/AAAAAAAAAEg/7iEqmRd4BVc/s1600/IMG_0325.JPG">
-    </div>
-    <div  id="Stiles">
-        <img class = "collegeleft"src="https://yy2.staticflickr.com/7040/6928558411_5fbe35d3a4_z.jpg">
-    </div>
-     <div  id="JE">
-        <img class = "collegeright" src="http://upload.wikimedia.org/wikipedia/commons/f/f4/JE_Dining_Hall_set_up_for_Senior_Dinner.JPG">
-    </div>
-     <div  id="Morse">
-        <img class = "collegeleft"src="http://kierantimberlake.com/files/pages/10/morse_01.jpg">
-    </div>
-     <div  id="Pierson">
-        <img class = "collegeright" src="http://pierson.yalecollege.yale.edu/sites/default/files/styles/threshold-1382/public/bl0105-large_0.jpg">
-    </div>
-</div> -->
 
 <script type="text/javascript">
   var w = window,
@@ -121,81 +92,78 @@ var chart = c3.generate({
         ],
         type: 'bar',
     colors: {
-              <% if college.index('BERKELEY COLLEGE') > 5 %>
-                  'BERKELEY COLLEGE': '#DD0000',
+              <% if college.index('BERKELEY') > 5 %>
+                  'BERKELEY': '#DD0000',
               <% else %>
-                  'BERKELEY COLLEGE': '#11AE28',
+                  'BERKELEY': '#11AE28',
               <% end %>
 
-               <% if college.index('BRANFORD COLLEGE') > 5 %>
-                  'BRANFORD COLLEGE': '#DD0000',
+               <% if college.index('BRANFORD') > 5 %>
+                  'BRANFORD': '#DD0000',
               <% else %>
-                  'BRANFORD COLLEGE': '#11AE28',
+                  'BRANFORD': '#11AE28',
               <% end %>
 
-               <% if college.index('CALHOUN COLLEGE,JOHN') > 5 %>
-                  'CALHOUN COLLEGE,JOHN': '#DD0000',
+               <% if college.index('CALHOUN') > 5 %>
+                  'CALHOUN': '#DD0000',
               <% else %>
-                  'CALHOUN COLLEGE,JOHN': '#11AE28',
+                  'CALHOUN': '#11AE28',
               <% end %>
 
-               <% if college.index('DAVENPORT COLLEGE') > 5 %>
-                  'DAVENPORT COLLEGE': '#DD0000',
+               <% if college.index('DAVENPORT') > 5 %>
+                  'DAVENPORT': '#DD0000',
               <% else %>
-                  'DAVENPORT COLLEGE': '#11AE28',
+                  'DAVENPORT': '#11AE28',
               <% end %>
 
-              <% if college.index('EZRA STILES COLLEGE') > 5 %>
-                  'EZRA STILES COLLEGE': '#DD0000',
+              <% if college.index('EZRA STILES') > 5 %>
+                  'EZRA STILES': '#DD0000',
               <% else %>
-                  'EZRA STILES COLLEGE': '#11AE28',
+                  'EZRA STILES': '#11AE28',
               <% end %>
 
-              <% if college.index('JONATHAN EDWARDS COL') > 5 %>
-                  'JONATHAN EDWARDS COL': '#DD0000',
+              <% if college.index('JONATHAN EDWARDS') > 5 %>
+                  'JONATHAN EDWARDS': '#DD0000',
               <% else %>
-                  'JONATHAN EDWARDS COL': '#11AE28',
+                  'JONATHAN EDWARDS': '#11AE28',
               <% end %>
 
-              <% if college.index('MORSE COLLEGE') > 5 %>
-                  'MORSE COLLEGE': '#DD0000',
+              <% if college.index('MORSE') > 5 %>
+                  'MORSE': '#DD0000',
               <% else %>
-                  'MORSE COLLEGE': '#11AE28',
+                  'MORSE': '#11AE28',
               <% end %>
 
-              <% if college.index('PIERSON COLLEGE') > 5 %>
-                  'PIERSON COLLEGE': '#DD0000',
+              <% if college.index('PIERSON') > 5 %>
+                  'PIERSON': '#DD0000',
               <% else %>
-                  'PIERSON COLLEGE': '#11AE28',
+                  'PIERSON': '#11AE28',
               <% end %>
 
-              <% if college.index('SAYBROOK COLLEGE') > 5 %>
-                  'SAYBROOK COLLEGE': '#DD0000',
+              <% if college.index('SAYBROOK') > 5 %>
+                  'SAYBROOK': '#DD0000',
               <% else %>
-                  'SAYBROOK COLLEGE': '#11AE28',
+                  'SAYBROOK': '#11AE28',
               <% end %>
 
-              <% if college.index('SILLIMAN COLLEGE') > 5 %>
-                  'SILLIMAN COLLEGE': '#DD0000',
+              <% if college.index('SILLIMAN') > 5 %>
+                  'SILLIMAN': '#DD0000',
               <% else %>
-                  'SILLIMAN COLLEGE': '#11AE28',
+                  'SILLIMAN': '#11AE28',
               <% end %>
 
-              <% if college.index('TIMOTHY DWIGHT COLL.') > 5 %>
-                  'TIMOTHY DWIGHT COLL.': '#DD0000',
+              <% if college.index('TIMOTHY DWIGHT') > 5 %>
+                  'TIMOTHY DWIGHT': '#DD0000',
               <% else %>
-                  'TIMOTHY DWIGHT COLL.': '#11AE28',
+                  'TIMOTHY DWIGHT': '#11AE28',
               <% end %>
 
-              <% if college.index('TRUMBULL COLLEGE') > 5 %>
-                  'TRUMBULL COLLEGE': '#DD0000',
+              <% if college.index('TRUMBULL') > 5 %>
+                  'TRUMBULL': '#DD0000',
               <% else %>
-                  'TRUMBULL COLLEGE': '#11AE28',
+                  'TRUMBULL': '#11AE28',
               <% end %>
-                // 'Berkeley College' : '#DD0000'
 
-                // 'BERKELEY COLLEGE': '#DD0000',
-                // 'TRUMBULL COLLEGE': '#11AE28'
               },
               size:{
                 height: 1
@@ -203,10 +171,7 @@ var chart = c3.generate({
         labels: {
           format:{
             format: function (v, id) { return "Default Format on " + id; },
-            // format: {
-            //     y: d3.format('$'),
                 y: function (v, id) { return id + '\t'+ Math.round(v*100) + '%'; },
-//                y2: function (v, id) { return "Y2 Format on " + id; }             // d3.style("font-size", "34px")
           }
         },
         zoom:{
@@ -260,34 +225,6 @@ var chart = c3.generate({
 });
 
 </script>
-    <!-- <button class="button-large pure-button pure-button-primary">See the Leaderboard</button> -->
-
-<!--
-    Berkeley: http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg
-    
-    Branford: http://31.media.tumblr.com/97d7ce38de20a27211fa78adfbd9e79c/tumblr_mrumvndF8n1r0cgg3o9_1280.jpg
-
-    Calhoun: http://upload.wikimedia.org/wikipedia/commons/f/f0/Calhoun_College_2011._JPM.jpg
-
-    Davenport: http://kierantimberlake.com/files/pages/10/morse_01.jpg
-    
-    Ezra Stiles: http://kierantimberlake.com/files/pages/10/morse_firs.jpg
-
-    Johnathan Edwards: http://upload.wikimedia.org/wikipedia/commons/f/f4/JE_Dining_Hall_set_up_for_Senior_Dinner.JPG
-
-    Morse: http://kierantimberlake.com/files/pages/10/morse_01.jpg
-
-    Pierson: http://pierson.yalecollege.yale.edu/sites/default/files/styles/threshold-1382/public/bl0105-large_0.jpg
-
-    Saybrook: http://static.panoramio.com/photos/large/45521356.jpg
-
-    Silliman: https://c2.staticflickr.com/8/7179/7120205533_32a9afba0d.jpg
-
-    TD: http://timothydwight.yalecollege.yale.edu/sites/default/files/styles/adaptive/public/timothydwight1.png
-
-    Trumbull: http://upload.wikimedia.org/wikipedia/en/5/5b/MainCourtyard.jpg
-     -->    
+   
      </div>
      </div>
-
-  

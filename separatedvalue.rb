@@ -37,6 +37,11 @@ puts finaldata
 File.open('data.tsv', 'w'){ |file|
 	file.write("College\tCogen Electricity\n")
 	finaldata.each do |key, value|
-		file.write(key.to_s + "\t" + value.to_s + "\n")
+		key = key.to_s.split(' ')
+		if key.length == 3
+			file.write(key[0].to_s + " "+key[1].to_s + "\t" + value.to_s + "\n")
+		else
+			file.write(key[0].to_s + "\t" + value.to_s + "\n")
+		end
 	end
 }
