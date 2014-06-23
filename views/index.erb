@@ -93,6 +93,7 @@
 
 
 <script type="text/javascript">
+
 var chart = c3.generate({
     size: {
       height: .75 *  y
@@ -104,13 +105,92 @@ var chart = c3.generate({
         ],
         type: 'bar',
     colors: {
-                'Best Colleges': '#11AE28',
-                'Worst Colleges': '#DD0000'
+              <% if college.index('BERKELEY COLLEGE') > 5 %>
+                  'BERKELEY COLLEGE': '#DD0000',
+              <% else %>
+                  'BERKELEY COLLEGE': '#11AE28',
+              <% end %>
+
+               <% if college.index('BRANFORD COLLEGE') > 5 %>
+                  'BRANFORD COLLEGE': '#DD0000',
+              <% else %>
+                  'BRANFORD COLLEGE': '#11AE28',
+              <% end %>
+
+               <% if college.index('CALHOUN COLLEGE,JOHN') > 5 %>
+                  'CALHOUN COLLEGE,JOHN': '#DD0000',
+              <% else %>
+                  'CALHOUN COLLEGE,JOHN': '#11AE28',
+              <% end %>
+
+               <% if college.index('DAVENPORT COLLEGE') > 5 %>
+                  'DAVENPORT COLLEGE': '#DD0000',
+              <% else %>
+                  'DAVENPORT COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('EZRA STILES COLLEGE') > 5 %>
+                  'EZRA STILES COLLEGE': '#DD0000',
+              <% else %>
+                  'EZRA STILES COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('JONATHAN EDWARDS COL') > 5 %>
+                  'JONATHAN EDWARDS COL': '#DD0000',
+              <% else %>
+                  'JONATHAN EDWARDS COL': '#11AE28',
+              <% end %>
+
+              <% if college.index('MORSE COLLEGE') > 5 %>
+                  'MORSE COLLEGE': '#DD0000',
+              <% else %>
+                  'MORSE COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('PIERSON COLLEGE') > 5 %>
+                  'PIERSON COLLEGE': '#DD0000',
+              <% else %>
+                  'PIERSON COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('SAYBROOK COLLEGE') > 5 %>
+                  'SAYBROOK COLLEGE': '#DD0000',
+              <% else %>
+                  'SAYBROOK COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('SILLIMAN COLLEGE') > 5 %>
+                  'SILLIMAN COLLEGE': '#DD0000',
+              <% else %>
+                  'SILLIMAN COLLEGE': '#11AE28',
+              <% end %>
+
+              <% if college.index('TIMOTHY DWIGHT COLL.') > 5 %>
+                  'TIMOTHY DWIGHT COLL.': '#DD0000',
+              <% else %>
+                  'TIMOTHY DWIGHT COLL.': '#11AE28',
+              <% end %>
+
+              <% if college.index('TRUMBULL COLLEGE') > 5 %>
+                  'TRUMBULL COLLEGE': '#DD0000',
+              <% else %>
+                  'TRUMBULL COLLEGE': '#11AE28',
+              <% end %>
+                // 'Berkeley College' : '#DD0000'
+
+                // 'BERKELEY COLLEGE': '#DD0000',
+                // 'TRUMBULL COLLEGE': '#11AE28'
+              },
+              size:{
+                height: 1
               },
         labels: {
           format:{
-            y: d3.format('%'),
-             // d3.style("font-size", "34px")
+            format: function (v, id) { return "Default Format on " + id; },
+            // format: {
+            //     y: d3.format('$'),
+                y: function (v, id) { return id + '\t'+ Math.round(v*100) + '%'; },
+//                y2: function (v, id) { return "Y2 Format on " + id; }             // d3.style("font-size", "34px")
           }
         },
         zoom:{
@@ -140,7 +220,10 @@ var chart = c3.generate({
     },
     grid: {
         y: {
-            lines: [{value: 0}]
+            lines: [{value: 0}],
+        }, 
+        x:{
+          show: true
         }
     },
     bar: {
@@ -152,9 +235,14 @@ var chart = c3.generate({
         format: {
             title: function (d) { return 'Data ' + d; },
             value: d3.format("g")
-        }
+        }, 
+        grouped : false
+    },
+    legend:{
+      position:'right'
     }
 });
+
 </script>
     <!-- <button class="button-large pure-button pure-button-primary">See the Leaderboard</button> -->
 
