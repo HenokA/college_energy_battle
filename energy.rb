@@ -88,7 +88,7 @@ get '/data/:name' do
 	dates = Array.new
 	data = Array.new
 	college_name = ""
-	colleges = {"bk" => 'BERKELEY COLLEGE', 'br' => 'BRANFORD COLLEGE', 'cc' => "CALHOUN COLLEGE,JOHN", 'dc' => 'DAVENPORT COLLEGE', 'es' => 'EZRA STILES COLLEGE', 'je' => "JONATHAN EDWARDS COL", 'mc'=> "MORSE COLLEGE", 'pc' => 'PIERSON COLLEGE', 'sm' => "SILLIMAN COLLEGE", 'sy'=> "SAYBROOK COLLEGE", 'tc' => 'TRUMBULL COLLEGE', 'td' => 'TIMOTHY DWIGHT COLL.' }
+	colleges = {"bk" => 'BERKELEY COLLEGE\r\n', 'br' => 'BRANFORD COLLEGE\n', 'cc' => "CALHOUN COLLEGE,JOHN", 'dc' => 'DAVENPORT COLLEGE', 'es' => 'EZRA STILES COLLEGE', 'je' => "JONATHAN EDWARDS COL", 'mc'=> "MORSE COLLEGE", 'pc' => 'PIERSON COLLEGE', 'sm' => "SILLIMAN COLLEGE", 'sy'=> "SAYBROOK COLLEGE", 'tc' => 'TRUMBULL COLLEGE', 'td' => 'TIMOTHY DWIGHT COLL.' }
 	File.open('adjusted.txt', 'r'){ |file|
 		file.each_line do |line|
 			college_name = params[:name]
