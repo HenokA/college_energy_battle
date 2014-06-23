@@ -27,11 +27,27 @@ h2.subtitle{
 
 
 .container{
-	width: 90%;
-	margin: 0 auto;
-/*	text-align: center
+  width: 90%;
+  margin: 0 auto;
+/*  text-align: center
 */
 }
+
+
+.chart{
+  /*background-color: white;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding-top: 18px;
+  padding-bottom: 18px;*/
+  /*margin-left: 17%;*/
+  /*left: 0;*/
+/*  margin: auto;
+*/  margin-top: 32px; 
+  
+  /*width: 90%;*/
+}
+
 
 h1, h2, h3, h4{
 	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
