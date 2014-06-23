@@ -1,3 +1,7 @@
+
+
+
+
 <div class='sticky'>
 <nav class='top-bar' data-topbar>
 <ul class='title-area'>
@@ -79,6 +83,7 @@
 </script>
 
 
+
 <script type="text/javascript">
 
 var chart = c3.generate({
@@ -86,9 +91,9 @@ var chart = c3.generate({
       height: .75 *  y
     },
     data: {
-        rows: [
+        columns: [
             // <%= negdata %>, <%= posdata %>
-            <%=college%>, <%=data %>
+            <%=data.unshift('Data') %>
         ],
         type: 'bar',
     colors: {
@@ -224,8 +229,17 @@ var chart = c3.generate({
     }
 });
 
+     // $( ".c3-bar" ).css("fill", "red");
+
 </script>
+
+<style type="text/css">
+  .c3-bar{
+    fill: red;
+  }
+
+</style>
+
    
      </div>
      </div>
-     <img src="http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg"
