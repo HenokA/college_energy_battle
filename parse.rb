@@ -1,6 +1,29 @@
 #Henok Addis, Phillip Esterman
 #Yale College, 2017
 
+# Berkeley: http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg
+    
+#     Branford: http://31.media.tumblr.com/97d7ce38de20a27211fa78adfbd9e79c/tumblr_mrumvndF8n1r0cgg3o9_1280.jpg
+
+#     Calhoun: http://upload.wikimedia.org/wikipedia/commons/f/f0/Calhoun_College_2011._JPM.jpg
+
+#     Davenport: http://kierantimberlake.com/files/pages/10/morse_01.jpg
+    
+#     Ezra Stiles: https://yy2.staticflickr.com/7040/6928558411_5fbe35d3a4_z.jpg
+
+#     Johnathan Edwards: http://upload.wikimedia.org/wikipedia/commons/f/f4/JE_Dining_Hall_set_up_for_Senior_Dinner.JPG
+
+#     Morse: http://kierantimberlake.com/files/pages/10/morse_01.jpg
+
+#     Pierson: http://pierson.yalecollege.yale.edu/sites/default/files/styles/threshold-1382/public/bl0105-large_0.jpg
+
+#     Saybrook: http://static.panoramio.com/photos/large/45521356.jpg
+
+#     Silliman: https://c2.staticflickr.com/8/7179/7120205533_32a9afba0d.jpg
+
+#     TD: http://timothydwight.yalecollege.yale.edu/sites/default/files/styles/adaptive/public/timothydwight1.png
+
+#     Trumbull: http://upload.wikimedia.org/wikipedia/en/5/5b/MainCourtyard.jpg
 require 'spreadsheet'
 # require 'parseexcel'
 ###READING TO FILE

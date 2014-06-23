@@ -49,7 +49,7 @@ get '/about' do
 	college = Array.new
 	File.open('data.tsv', 'r'){ |file|
 		file.each_line do |line|
-			line= line.split("\t")
+							line= line.split("\t")
 			if negdata == []
 				#this is what gives the dataset its name
 				negdata.push("Negative Values")
@@ -78,3 +78,39 @@ end
 get '/leaderboard' do
 	erb :"leaderboard"
 end
+
+
+
+
+get '/data/:name' do
+	puts "PENIS"
+	grab = false
+	dates = Array.new
+	data = Array.new
+	college_name = ""
+	colleges = {"bk" => 'BERKELEY COLLEGE', 'br' => 'BRANFORD COLLEGE', 'cc' => "CALHOUN COLLEGE,JOHN", 'dc' => 'DAVENPORT COLLEGE', 'es' => 'EZRA STILES COLLEGE', 'je' => "JONATHAN EDWARDS COL", 'mc'=> "MORSE COLLEGE", 'pc' => 'PIERSON COLLEGE', 'sm' => "SILLIMAN COLLEGE", 'sy'=> "SAYBROOK COLLEGE", 'tc' => 'TRUMBULL COLLEGE', 'td' => 'TIMOTHY DWIGHT COLL.' }
+	File.open('adjusted.txt', 'r'){ |file|
+		file.each_line do |line|
+			college_name = params[:name]
+			puts colleges[college_name] == line
+			if grab == true
+				line= line.split(",")
+				#in theory, there should never be a case where there is a 0% 
+				#change in energy because the chance of them using the EXACT 
+				#SAME AMOUNT is almost 0
+				data.push(line[2].to_f.round(3)) #pushes values less than 0
+				dates.push(line[0])
+			end
+			if line == colleges[college_name]
+				grab = true
+			end	
+			if line == 'newline'
+				grab = false
+			end		
+		end
+	}
+	puts dates
+	puts data
+	erb college_name.to_sym, :locals => {:data => data, :dates => dates}
+end
+
