@@ -1,54 +1,54 @@
-<div class='sticky'>
-<nav class='top-bar' data-topbar>
-<ul class='title-area'>
-<li class='name'>
-<h1>
-<a href='/'>Energize Yale | Compete to Conserve</a>
-</h1>
-</li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-</ul>
-<section class='top-bar-section'>
-<ul class='right'>
-<li class='has-form'>
-<a class='button' href='#'>How Do You Stack Up?</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='/about'>About</a>
-</li>
-<li class='divider'></li>
-<li class='has-dropdown'>
-  <a href='#'>College Data</a>
-  <ul class='dropdown'>
-    <li><a href='/data/bk'>Berkeley</a></li>
-    <li><a href='/data/br'>Branford</a></li>
-    <li><a href='/data/cc'>Calhoun</a></li>
-    <li><a href='/data/dc'>Davenport</a></li>
-    <li><a href='/data/es'>Ezra Stiles</a></li>
-    <li><a href='/data/je'>Jonathan Edwards</a></li>
-    <li><a href='/data/mc'>Morse</a></li>
-    <li><a href='/data/pc'>Pierson</a></li>
-    <li><a href='/data/sy'>Saybrook</a></li>
-    <li><a href='/data/sm'>Siliman</a></li>
-    <li><a href='/data/td'>Timothy Dwight</a></li>
-    <li><a href='/data/tc'>Trumbull</a></li>
+  <div class='sticky'>
+  <nav class='top-bar' data-topbar>
+  <ul class='title-area'>
+  <li class='name'>
+  <h1>
+  <a href='/'>Energize Yale | Compete to Conserve</a>
+  </h1>
+  </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
-</li>
+  <section class='top-bar-section'>
+  <ul class='right'>
+  <li class='has-form'>
+  <a class='button' href='#'>How Do You Stack Up?</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='/about'>About</a>
+  </li>
+  <li class='divider'></li>
+  <li class='has-dropdown'>
+    <a href='#'>College Data</a>
+    <ul class='dropdown'>
+      <li><a href='/data/bk'>Berkeley</a></li>
+      <li><a href='/data/br'>Branford</a></li>
+      <li><a href='/data/cc'>Calhoun</a></li>
+      <li><a href='/data/dc'>Davenport</a></li>
+      <li><a href='/data/es'>Ezra Stiles</a></li>
+      <li><a href='/data/je'>Jonathan Edwards</a></li>
+      <li><a href='/data/mc'>Morse</a></li>
+      <li><a href='/data/pc'>Pierson</a></li>
+      <li><a href='/data/sy'>Saybrook</a></li>
+      <li><a href='/data/sm'>Siliman</a></li>
+      <li><a href='/data/td'>Timothy Dwight</a></li>
+      <li><a href='/data/tc'>Trumbull</a></li>
+    </ul>
+  </li>
 
 
-<li class='divider'></li>
-<li>
-<a href='#'>Button 3</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Button 4</a>
-</li>
-</ul>
-</section>
-</nav>
-</div>
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 3</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 4</a>
+  </li>
+  </ul>
+  </section>
+  </nav>
+  </div>
 
 <% images = {'BERKELEY COLLEGE' => "http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg", 'BRANFORD COLLEGE'=>"http://31.media.tumblr.com/97d7ce38de20a27211fa78adfbd9e79c/tumblr_mrumvndF8n1r0cgg3o9_1280.jpg", 
   'CALHOUN COLLEGE,JOHN'=>"http://upload.wikimedia.org/wikipedia/commons/f/f0/Calhoun_College_2011._JPM.jpg", 'DAVENPORT COLLEGE'=>"http://upload.wikimedia.org/wikipedia/commons/f/f0/Calhoun_College_2011._JPM.jpg", 
@@ -79,7 +79,24 @@
 </script>
 
 
+
+<div id="chart2"></div>
+   
+   <script type="text/javascript">
+var chart2 = c3.generate({
+   size: {
+      height: .75 *  y
+    },
+    data: {
+        columns: [
+           [0,1,2,3,4], [9,7,6,5,4]
+        ]
+    }
+});
+</script>
 <script type="text/javascript">
+
+
 
 var chart = c3.generate({
     size: {
@@ -225,7 +242,6 @@ var chart = c3.generate({
 });
 
 </script>
-   
+
      </div>
      </div>
-     <img src="http://upload.wikimedia.org/wikipedia/commons/b/b4/Berkeley_College_(South)_at_Yale.jpg"
