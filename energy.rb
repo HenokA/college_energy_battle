@@ -39,6 +39,7 @@ get '/' do
 	puts posdata
 	college.shift
 	college.reverse!
+	puts college
 	erb :"index", :locals =>{:negdata => negdata, :posdata => posdata, :data => data, :college => college}
 end	
 
@@ -76,9 +77,4 @@ end
 
 get '/leaderboard' do
 	erb :"leaderboard"
-end
-
-get '/data/:name' do
-college_name = params[:name]
-	erb college_name.to_sym
 end
