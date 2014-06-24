@@ -88,27 +88,41 @@ var chart = c3.generate({
     },
     data: {
         columns: [
-            // <%= negdata %>, <%= posdata %>
-            <%=data.unshift('Electricity Usage') %>
         ],
         type: 'bar',
     colors: {
 
               "Electricity Usage": "#11AE28",
+
               },
 
-              // var count = 0;
+              color: function(color, d) {
 
-              // color: function(color, d) {
-
-              //   var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
+                // var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
 
 
+                  var scale_color = d3.scale.linear()
+                      .domain([-1, 0, 1])
+                      .range(["red", "orange", "green"]);
+                   
+                  scale_color(-1)   // "#ff0000" red
+                  scale_color(-0.5) // "#ff8080" pinkish
+                  scale_color(0)    // "#ffffff" white
+                  scale_color(0.5)  // "#80c080" getting greener
+                  scale_color(0.7)  // "#4da64d" almost there..
+                  scale_color(1)    // "#008000" totally green!
 
+                  return d.value > 0 ? d3.rgb(scale_color(1)) : d3.rgb(scale_color(-1));
+                 
 
-              //   // return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .05) : color;
+                  // if d.value > 0
+                  //   return d3.rgb(scale_color(1));
+                  // else
+                  // return d3.rgb(scale_color(-1));
 
-              // },
+                // return d.id && d.id === 'Electricity Usage' ? d3.rgb(color).darker(d.value / .05) : color;
+
+              },
 
               size:{
                 height: 1
@@ -118,7 +132,7 @@ var chart = c3.generate({
             format: function (v, id) { return "Default Format on " + id; },
                 y: function (v, id) { var collegelist = <%=college%>;
                   var listdata = <%= data %>
-                  return collegelist[listdata.indexOf(v)-1] + '\t'+ Math.round(v*100) + '%'; },
+                  return collegelist[listdata.indexOf(v)] + '\t'+ Math.round(v*100) + '%'; },
           }
         },
         zoom:{
@@ -173,7 +187,14 @@ var chart = c3.generate({
       show: false
     }
 });
-
+setTimeout(function () {
+    chart.load({
+        columns: [
+            <%=data.unshift('Electricity Usage') %>
+           
+        ],
+    });
+}, 400);
 
 </script>
 
