@@ -94,7 +94,7 @@ var chart = c3.generate({
         type: 'bar',
     colors: {
 
-              Data: "#11AE28",
+              "Electricity Usage": "#11AE28",
               },
 
               // var count = 0;
@@ -161,8 +161,8 @@ var chart = c3.generate({
     },
     tooltip: {
         format: {
-            title: function (d) { 
-              return 'Cogen Electricity'; },
+            title: function (d) { var position = ['First Place!', 'Second Place', 'Third Place', 'Fourth Place', 'Fifth Place', 'Sixth Place', 'Seventh Place', 'Eighth Place', 'Ninth Place', 'Tenth Place', 'Eleventh Place', 'Twelfth Place'];
+              return position[d]; },
             value: d3.format("g")
         }, 
         grouped : false,
