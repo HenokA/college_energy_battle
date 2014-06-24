@@ -89,86 +89,12 @@ var chart = c3.generate({
     data: {
         columns: [
             // <%= negdata %>, <%= posdata %>
-            <%=data.unshift('Data') %>
+            <%=data.unshift('Electricity Usage') %>
         ],
         type: 'bar',
     colors: {
 
               Data: "#11AE28",
-
-
-              <% if college.index('BERKELEY') > 5 %>
-                  'BERKELEY': '#DD0000',
-              <% else %>
-                  'BERKELEY': '#11AE28',
-              <% end %>
-
-               <% if college.index('BRANFORD') > 5 %>
-                  'BRANFORD': '#DD0000',
-              <% else %>
-                  'BRANFORD': '#11AE28',
-              <% end %>
-
-               <% if college.index('CALHOUN') > 5 %>
-                  'CALHOUN': '#DD0000',
-              <% else %>
-                  'CALHOUN': '#11AE28',
-              <% end %>
-
-               <% if college.index('DAVENPORT') > 5 %>
-                  'DAVENPORT': '#DD0000',
-              <% else %>
-                  'DAVENPORT': '#11AE28',
-              <% end %>
-
-              <% if college.index('EZRA STILES') > 5 %>
-                  'EZRA STILES': '#DD0000',
-              <% else %>
-                  'EZRA STILES': '#11AE28',
-              <% end %>
-
-              <% if college.index('JONATHAN EDWARDS') > 5 %>
-                  'JONATHAN EDWARDS': '#DD0000',
-              <% else %>
-                  'JONATHAN EDWARDS': '#11AE28',
-              <% end %>
-
-              <% if college.index('MORSE') > 5 %>
-                  'MORSE': '#DD0000',
-              <% else %>
-                  'MORSE': '#11AE28',
-              <% end %>
-
-              <% if college.index('PIERSON') > 5 %>
-                  'PIERSON': '#DD0000',
-              <% else %>
-                  'PIERSON': '#11AE28',
-              <% end %>
-
-              <% if college.index('SAYBROOK') > 5 %>
-                  'SAYBROOK': '#DD0000',
-              <% else %>
-                  'SAYBROOK': '#11AE28',
-              <% end %>
-
-              <% if college.index('SILLIMAN') > 5 %>
-                  'SILLIMAN': '#DD0000',
-              <% else %>
-                  'SILLIMAN': '#11AE28',
-              <% end %>
-
-              <% if college.index('TIMOTHY DWIGHT') > 5 %>
-                  'TIMOTHY DWIGHT': '#DD0000',
-              <% else %>
-                  'TIMOTHY DWIGHT': '#11AE28',
-              <% end %>
-
-              <% if college.index('TRUMBULL') > 5 %>
-                  'TRUMBULL': '#DD0000',
-              <% else %>
-                  'TRUMBULL': '#11AE28',
-              <% end %>
-
               },
 
               // var count = 0;
@@ -235,13 +161,16 @@ var chart = c3.generate({
     },
     tooltip: {
         format: {
-            title: function (d) { return 'Data ' + d; },
+            title: function (d) { 
+              return 'Cogen Electricity'; },
             value: d3.format("g")
         }, 
-        grouped : false
+        grouped : false,
+
     },
     legend:{
-      position:'right'
+      position:'right',
+      show: false
     }
 });
 
