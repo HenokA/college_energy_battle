@@ -84,33 +84,39 @@ end
 
 get '/data/:name' do
 	puts "PENIS"
+	finaldates = Array.new
 	grab = false
 	dates = Array.new
 	data = Array.new
 	college_name = ""
-	colleges = {"bk" => 'BERKELEY COLLEGE\r\n', 'br' => 'BRANFORD COLLEGE\n', 'cc' => "CALHOUN COLLEGE,JOHN", 'dc' => 'DAVENPORT COLLEGE', 'es' => 'EZRA STILES COLLEGE', 'je' => "JONATHAN EDWARDS COL", 'mc'=> "MORSE COLLEGE", 'pc' => 'PIERSON COLLEGE', 'sm' => "SILLIMAN COLLEGE", 'sy'=> "SAYBROOK COLLEGE", 'tc' => 'TRUMBULL COLLEGE', 'td' => 'TIMOTHY DWIGHT COLL.' }
+	colleges = {"bk" => 'BERKELEY COLLEGE', 'br' => 'BRANFORD COLLEGE', 'cc' => "CALHOUN COLLEGE,JOHN", 'dc' => 'DAVENPORT COLLEGE', 'es' => 'EZRA STILES COLLEGE', 'je' => "JONATHAN EDWARDS COL", 'mc'=> "MORSE COLLEGE", 'pc' => 'PIERSON COLLEGE', 'sm' => "SILLIMAN COLLEGE", 'sy'=> "SAYBROOK COLLEGE", 'tc' => 'TRUMBULL COLLEGE', 'td' => 'TIMOTHY DWIGHT COLL.' }
 	File.open('adjusted.txt', 'r'){ |file|
 		file.each_line do |line|
+			line = line.split(",")
 			college_name = params[:name]
-			puts colleges[college_name] == line
+			if line[0].strip.chomp.to_s == 'newline'
+				grab = false
+			end	
 			if grab == true
-				line= line.split(",")
 				#in theory, there should never be a case where there is a 0% 
 				#change in energy because the chance of them using the EXACT 
 				#SAME AMOUNT is almost 0
 				data.push(line[2].to_f.round(3)) #pushes values less than 0
 				dates.push(line[0])
 			end
-			if line == colleges[college_name]
+			if line[0].strip.chomp.to_s == colleges[college_name.strip.chomp.to_s]
 				grab = true
 			end	
-			if line == 'newline'
-				grab = false
-			end		
+				
 		end
 	}
-	puts dates
-	puts data
-	erb college_name.to_sym, :locals => {:data => data, :dates => dates}
+	dates.each do |date|
+		date = date.split('/')
+		finaldates.push(date[1].to_s + "-" + date[0]+"-01")
+	end
+dates.unshift('x')
+finaldates.unshift('x')
+data.unshift(colleges[college_name].strip.chomp.to_s)
+	erb college_name.to_sym, :locals => {:dates => dates, :finaldates => finaldates, :data => data}
 end
 

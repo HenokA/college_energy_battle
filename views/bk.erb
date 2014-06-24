@@ -1,43 +1,54 @@
 <div class='sticky'>
-<nav class='top-bar' data-topbar>
-<ul class='title-area'>
-<li class='name'>
-<h1>
-<a href='/'>Energize Yale | Compete to Conserve</a>
-</h1>
-</li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-</ul>
-<section class='top-bar-section'>
-<ul class='right'>
-<li class='has-form'>
-<a class='button' href='#'>How Do You Stack Up?</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='/about'>About</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Data</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Button 3</a>
-</li>
-<li class='divider'></li>
-<li>
-<a href='#'>Button 4</a>
-</li>
-</ul>
-</section>
-</nav>
-</div>
-<div class="container">
+  <nav class='top-bar' data-topbar>
+  <ul class='title-area'>
+  <li class='name'>
+  <h1>
+  <a href='/'>Energize Yale | Compete to Conserve</a>
+  </h1>
+  </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class='top-bar-section'>
+  <ul class='right'>
+  <li class='has-form'>
+  <a class='button' href='#'>How Do You Stack Up?</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='/about'>About</a>
+  </li>
+  <li class='divider'></li>
+  <li class='has-dropdown'>
+    <a href='#'>College Data</a>
+    <ul class='dropdown'>
+      <li><a href='/data/bk'>Berkeley</a></li>
+      <li><a href='/data/br'>Branford</a></li>
+      <li><a href='/data/cc'>Calhoun</a></li>
+      <li><a href='/data/dc'>Davenport</a></li>
+      <li><a href='/data/es'>Ezra Stiles</a></li>
+      <li><a href='/data/je'>Jonathan Edwards</a></li>
+      <li><a href='/data/mc'>Morse</a></li>
+      <li><a href='/data/pc'>Pierson</a></li>
+      <li><a href='/data/sy'>Saybrook</a></li>
+      <li><a href='/data/sm'>Siliman</a></li>
+      <li><a href='/data/td'>Timothy Dwight</a></li>
+      <li><a href='/data/tc'>Trumbull</a></li>
+    </ul>
+  </li>
 
-  <div class="container">
 
-
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 3</a>
+  </li>
+  <li class='divider'></li>
+  <li>
+  <a href='#'>Button 4</a>
+  </li>
+  </ul>
+  </section>
+  </nav>
+  </div>
 <h1 class='title'>
   Electricity and Gas Usage
   </h1>
@@ -65,6 +76,7 @@ var chart = c3.generate({
    size: {
       height: .75 *  y
     },
+<<<<<<< HEAD
 
     data: {
         x: 'x',
@@ -75,6 +87,13 @@ var chart = c3.generate({
          
             ['sample', 30, 200, 100, 400, 150, 250],
             ['data2', 130, 340, 200, 500, 250, 350]
+=======
+    data: {
+          x: 'x',
+        columns: [
+            <%=finaldates%>,
+            <%= data %>
+>>>>>>> db0dc77c2af22a24d0f70ebe0bf292ac60a7d91d
         ]
     },
 
@@ -87,6 +106,7 @@ axis: {
             }
         }
     },
+<<<<<<< HEAD
 
 
     subchart: {
@@ -96,9 +116,18 @@ axis: {
 
 
 
+=======
+     zoom: {
+        enabled: true
+    },
+    subchart:{
+      show: true
+    }
+});
+
+>>>>>>> db0dc77c2af22a24d0f70ebe0bf292ac60a7d91d
 </script>
 
 </div>
 
 </div>
-
