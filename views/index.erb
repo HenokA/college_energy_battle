@@ -113,6 +113,10 @@ var chart = c3.generate({
         ],
         type: 'bar',
     colors: {
+
+              Data: "#11AE28",
+
+
               <% if college.index('BERKELEY') > 5 %>
                   'BERKELEY': '#DD0000',
               <% else %>
@@ -186,6 +190,13 @@ var chart = c3.generate({
               <% end %>
 
               },
+
+              color: function(color, d) {
+
+                return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .01) : color;
+
+              },
+
               size:{
                 height: 1
               },

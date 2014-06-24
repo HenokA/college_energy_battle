@@ -1,0 +1,106 @@
+[1mdiff --cc views/index.erb[m
+[1mindex 0113a80,b7322f1..0000000[m
+[1m--- a/views/index.erb[m
+[1m+++ b/views/index.erb[m
+[36m@@@ -286,20 -242,13 +287,31 @@@[m [mvar chart = c3.generate([m
+      }[m
+  });[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +     // $( ".c3-bar" ).css("fill", "red");[m
+[32m +[m
+[32m +</script>[m
+[32m +[m
+[32m +<<<<<<< HEAD[m
+[32m +<style type="text/css">[m
+[32m +  .c3-bar{[m
+[32m +    fill: red;[m
+[32m +  }[m
+[32m +[m
+[32m +</style>[m
+[32m +[m
+[32m +   [m
+[32m +=======[m
+[32m +>>>>>>> db0dc77c2af22a24d0f70ebe0bf292ac60a7d91d[m
+[32m++=======[m
+[32m+ [m
+[32m+ </script>[m
+[32m+ [m
+[32m+  </div>[m
+[32m+ [m
+[32m+  </div>[m
+[32m+ [m
+[32m+  [m
+[32m++>>>>>>> a232775fd7ae9dc351f144c2228e8df98e0251ef[m
+       </div>[m
+[31m-      </div>[m
+[32m+      <button id = "boobs" class="boobs pure-button pure-button-primary" href="/about">Learn More</button>[m
+[1mdiff --cc views/layout.erb[m
+[1mindex 6b5c175,930ac85..0000000[m
+[1m--- a/views/layout.erb[m
+[1m+++ b/views/layout.erb[m
+[36m@@@ -5,7 -5,6 +5,10 @@@[m
+  [m
+  			<link type: "text/css" rel="stylesheet" href = "/style.css">[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +[m
+[32m++=======[m
+[32m++>>>>>>> a232775fd7ae9dc351f144c2228e8df98e0251ef[m
+  		 <link rel="stylesheet" href="/css/normalize.css">[m
+   		 <link rel="stylesheet" href="/css/foundation.css">[m
+  [m
+[36m@@@ -25,6 -25,8 +29,11 @@@[m
+  [m
+  <!-- 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">[m
+   -->[m
+[32m++<<<<<<< HEAD[m
+[32m++=======[m
+[32m+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>[m
+[32m+ [m
+[32m++>>>>>>> a232775fd7ae9dc351f144c2228e8df98e0251ef[m
+  					<!-- further links to fonts and javascript -->[m
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+  [m
+[1mdiff --git a/views/bk.html.erb b/views/bk.html.erb[m
+[1mdeleted file mode 100644[m
+[1mindex 23a16ef..0000000[m
+[1m--- a/views/bk.html.erb[m
+[1m+++ /dev/null[m
+[36m@@ -1,36 +0,0 @@[m
+[31m-<ul class='title-area'>[m
+[31m-<li class='name'>[m
+[31m-<h1>[m
+[31m-<a href='/'>Energize Yale | Compete to Conserve</a>[m
+[31m-</h1>[m
+[31m-</li>[m
+[31m-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>[m
+[31m-</ul>[m
+[31m-<section class='top-bar-section'>[m
+[31m-<ul class='right'>[m
+[31m-<li class='has-form'>[m
+[31m-<a class='button' href='#'>How Do You Stack Up?</a>[m
+[31m-</li>[m
+[31m-<li class='divider'></li>[m
+[31m-<li>[m
+[31m-<a href='/about'>About</a>[m
+[31m-</li>[m
+[31m-<li class='divider'></li>[m
+[31m-<li class='has-dropdown'>[m
+[31m-  <a href='#'>College Data</a>[m
+[31m-  <ul class='dropdown'>[m
+[31m-    <li><a href='#'>Berkeley</a></li>[m
+[31m-    <li><a href='#'>Branford</a></li>[m
+[31m-    <li><a href='#'>Calhoun</a></li>[m
+[31m-    <li><a href='#'>Davenport</a></li>[m
+[31m-    <li><a href='#'>Ezra Stiles</a></li>[m
+[31m-    <li><a href='#'>Jonathan Edwards</a></li>[m
+[31m-    <li><a href='#'>Morse</a></li>[m
+[31m-    <li><a href='#'>Pierson</a></li>[m
+[31m-    <li><a href='#'>Saybrook</a></li>[m
+[31m-    <li><a href='#'>Siliman</a></li>[m
+[31m-    <li><a href='#'>Timothy Dwight</a></li>[m
+[31m-    <li><a href='#'>Trumbull</a></li>[m
+[31m-  </ul>[m
+[31m-</li>[m
+[31m-[m
