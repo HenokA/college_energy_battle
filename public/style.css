@@ -58,6 +58,14 @@ h2.subtitle{
   margin: 0;
 }
 
+
+.c3-bar{
+
+fill: black;
+}
+
+
+
 h1, h2, h3, h4{
 	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }

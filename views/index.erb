@@ -1,3 +1,4 @@
+
   <div class='sticky'>
   <nav class='top-bar' data-topbar>
   <ul class='title-area'>
@@ -35,8 +36,6 @@
       <li><a href='/data/tc'>Trumbull</a></li>
     </ul>
   </li>
-
-
   <li class='divider'></li>
   <li>
   <a href='#'>Button 3</a>
@@ -79,22 +78,6 @@
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 </script>
 
-
-
-<div id="chart2"></div>
-   
-   <script type="text/javascript">
-var chart2 = c3.generate({
-   size: {
-      height: .75 *  y
-    },
-    data: {
-        columns: [
-           [0,1,2,3,4], [9,7,6,5,4]
-        ]
-    }
-});
-</script>
 <script type="text/javascript">
 
 
@@ -104,12 +87,16 @@ var chart = c3.generate({
       height: .75 *  y
     },
     data: {
-        rows: [
+        columns: [
             // <%= negdata %>, <%= posdata %>
-            <%=college%>, <%=data %>
+            <%=data.unshift('Data') %>
         ],
         type: 'bar',
     colors: {
+
+              Data: "#11AE28",
+
+
               <% if college.index('BERKELEY') > 5 %>
                   'BERKELEY': '#DD0000',
               <% else %>
@@ -183,13 +170,29 @@ var chart = c3.generate({
               <% end %>
 
               },
+
+              // var count = 0;
+
+              // color: function(color, d) {
+
+              //   var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
+
+
+
+
+              //   // return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .05) : color;
+
+              // },
+
               size:{
                 height: 1
               },
         labels: {
           format:{
             format: function (v, id) { return "Default Format on " + id; },
-                y: function (v, id) { return id + '\t'+ Math.round(v*100) + '%'; },
+                y: function (v, id) { var collegelist = <%=college%>;
+                  var listdata = <%= data %>
+                  return collegelist[listdata.indexOf(v)-1] + '\t'+ Math.round(v*100) + '%'; },
           }
         },
         zoom:{
@@ -249,7 +252,7 @@ var chart = c3.generate({
 
  </div>
 
+
  
-     </div>
 <!--      <button id = "boobs" class="boobs pure-button pure-button-primary" href="/about">Learn More</button>
  -->
