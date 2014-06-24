@@ -117,92 +117,31 @@ var chart = c3.generate({
               Data: "#11AE28",
 
 
-              <% if college.index('BERKELEY') > 5 %>
-                  'BERKELEY': '#DD0000',
-              <% else %>
-                  'BERKELEY': '#11AE28',
-              <% end %>
-
-               <% if college.index('BRANFORD') > 5 %>
-                  'BRANFORD': '#DD0000',
-              <% else %>
-                  'BRANFORD': '#11AE28',
-              <% end %>
-
-               <% if college.index('CALHOUN') > 5 %>
-                  'CALHOUN': '#DD0000',
-              <% else %>
-                  'CALHOUN': '#11AE28',
-              <% end %>
-
-               <% if college.index('DAVENPORT') > 5 %>
-                  'DAVENPORT': '#DD0000',
-              <% else %>
-                  'DAVENPORT': '#11AE28',
-              <% end %>
-
-              <% if college.index('EZRA STILES') > 5 %>
-                  'EZRA STILES': '#DD0000',
-              <% else %>
-                  'EZRA STILES': '#11AE28',
-              <% end %>
-
-              <% if college.index('JONATHAN EDWARDS') > 5 %>
-                  'JONATHAN EDWARDS': '#DD0000',
-              <% else %>
-                  'JONATHAN EDWARDS': '#11AE28',
-              <% end %>
-
-              <% if college.index('MORSE') > 5 %>
-                  'MORSE': '#DD0000',
-              <% else %>
-                  'MORSE': '#11AE28',
-              <% end %>
-
-              <% if college.index('PIERSON') > 5 %>
-                  'PIERSON': '#DD0000',
-              <% else %>
-                  'PIERSON': '#11AE28',
-              <% end %>
-
-              <% if college.index('SAYBROOK') > 5 %>
-                  'SAYBROOK': '#DD0000',
-              <% else %>
-                  'SAYBROOK': '#11AE28',
-              <% end %>
-
-              <% if college.index('SILLIMAN') > 5 %>
-                  'SILLIMAN': '#DD0000',
-              <% else %>
-                  'SILLIMAN': '#11AE28',
-              <% end %>
-
-              <% if college.index('TIMOTHY DWIGHT') > 5 %>
-                  'TIMOTHY DWIGHT': '#DD0000',
-              <% else %>
-                  'TIMOTHY DWIGHT': '#11AE28',
-              <% end %>
-
-              <% if college.index('TRUMBULL') > 5 %>
-                  'TRUMBULL': '#DD0000',
-              <% else %>
-                  'TRUMBULL': '#11AE28',
-              <% end %>
-
               },
 
-              // var count = 0;
+              color: function(color, d) {
 
-              // color: function(color, d) {
-
-              //   var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
+                // var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
 
 
+                  var scale_color = d3.scale.linear()
+                      .domain([-1, 0, 1])
+                      .range(["red", "white", "green"]);
+                   
+                  scale_color(-1)   // "#ff0000" red
+                  scale_color(-0.5) // "#ff8080" pinkish
+                  scale_color(0)    // "#ffffff" white
+                  scale_color(0.5)  // "#80c080" getting greener
+                  scale_color(0.7)  // "#4da64d" almost there..
+                  scale_color(1)    // "#008000" totally green!
 
 
-              //   // return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .05) : color;
 
-              // },
+
+
+                return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .05) : color;
+
+              },
 
               size:{
                 height: 1
