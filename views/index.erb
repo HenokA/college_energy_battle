@@ -191,11 +191,18 @@ var chart = c3.generate({
 
               },
 
-              color: function(color, d) {
+              // var count = 0;
 
-                return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .01) : color;
+              // color: function(color, d) {
 
-              },
+              //   var arr_colors = ['#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', '#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'];
+
+
+
+
+              //   // return d.id && d.id === 'Data' ? d3.rgb(color).darker(d.value / .05) : color;
+
+              // },
 
               size:{
                 height: 1
