@@ -13,7 +13,9 @@ line-height: 30px;
 
 }
 
-
+.what{
+  padding-top: 10%;
+}
 h1.title{
 	margin: 16px 0;
 	text-align: left;
@@ -51,7 +53,10 @@ h2.subtitle{
   
   /*width: 90%;*/
 }
-
+#Leaderboard{
+  padding:0;
+  margin: 0;
+}
 
 
 .c3-bar{
@@ -78,7 +83,17 @@ h1, h2, h3, h4{
 
   /*width: 90%;*/
 }
+p{
+  font-family: 'Open Sans', sans-serif;
+width: 100px;
 
+}
+.textdescription{
+}
+.left{
+  float: left;
+}
+.right{float:right;}
 /*h1{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	color: white;
@@ -141,4 +156,8 @@ h1, h2, h3, h4{
 .college {
   width: 15%;
   height: 15%;
+}
+
+#boobs{
+left: 100px;
 }
