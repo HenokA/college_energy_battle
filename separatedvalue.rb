@@ -6,7 +6,7 @@ colleges = ['BERKELEY COLLEGE', 'BRANFORD COLLEGE',
 data = Hash.new
 currentCollege = ""
 counter = 0
-File.open('adjusted.txt', 'r'){ |file|
+File.open('data.txt', 'r'){ |file|
 	file.each_line do |line|
 		if colleges.index(line.strip.chomp.to_s)!=nil
 			#Store the college value

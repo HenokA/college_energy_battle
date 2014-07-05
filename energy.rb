@@ -106,6 +106,6 @@ get '/data/:name' do
 dates.unshift('x')
 finaldates.unshift('x')
 data.unshift(colleges[college_name].strip.chomp.to_s)
-	erb college_name.to_sym, :locals => {:dates => dates, :finaldates => finaldates, :data => data}
+	erb :"collegedata.html", :locals => {:dates => dates, :finaldates => finaldates, :data => data}
 end
 
