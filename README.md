@@ -1,3 +1,5 @@
+#Energize Yale
+
 Phil Esterman and Henok Addis
 
 We envision a website that can expose some of the problems that Yale is releasing 
